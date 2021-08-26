@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+:root{
+    --darker-main: #53563F;
+    --dark-main: #B2B796;
+    --main: #E1E8B0;
+    --light-main: #F5F7DE;
+    --grey: #C9C9C3;
+    --white: #FAFAFA;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--white);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: var(--white);
+    padding: .5rem;
+}
+
+header .toggle{
+    height: 2rem;
+    width: 2rem;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s;
+    display: none;
+}
+
+header .toggle::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #000;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 0 #000;
+    transition: 0.2s;
+}
+
+header .toggle.active::before{
+    transform: translateY(0) rotate(45deg);
+    box-shadow: 0 0 0 #000;
+    transition: 0.2s;
+}
+
+header .toggle::after{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #000;
+    transform: translateY(10px);
+    transition: 0.2s;
+}
+
+header .toggle.active::after{
+    transform: translateY(0) rotate(-45deg);
+    transition: 0.2s;
+}
+
+header .logo{
+    height: 4rem;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--darker-main);
+    margin: 1rem;
+    font-weight: bold;
+    padding-bottom: .25rem;
+    font-size: 1.162rem;
+}
+
+nav ul li a:hover{
+    border-bottom: 2px solid var(--darker-main);
+}
+
+header .redes{
+    display: flex;
+}
+
+header .redes a{
+    position: relative;
+    background-color: var(--dark-main);
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    margin: 0 .5rem;
+    opacity: .5;
+    transition: all 0.2s;
+}
+
+header .redes a:hover{
+    opacity: 1;
+}
+
+header .redes #ig{
+    font-size: 1.3rem;
+}
+
+header .redes i{
+    color: var(--white);
+    font-size: 1.162rem;
+    padding: .5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+/*===============================                           MAIN                       ===========================*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+}
+
+/*=========================                                 HERO                  ==========================*/
+
+.hero{
+    width: 100vw;
+    padding: 2rem 5rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.hero .texto{
+    max-width: 526px;
+    margin-right: 6.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 7.5rem;
+}
+
+.hero .texto h1{
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--dark-main);
+    margin-bottom: 16px;
+}
+
+.hero .texto p{
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--darker-main);
+    margin-bottom: 2.5rem;
+    line-height: 25px;
+}
+
+.hero .texto button{
+    width: fit-content;
+    font-size: 16px;
+    font-weight: 900;
+    background-color: var(--main);
+    color: var(--darker-main);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 1.2rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.hero .texto button:hover{
+    background-color: var(--darker-main);
+    color: var(--main);
+}
+
+.hero img{
+    display: flex;
+    width: 475px;
+    height: 594px;
+    z-index: 100;
+}
+
+.hero .hero-img{
+    display: flex;
+    position: relative;
+    z-index: 100;
+}
+
+.hero .hero-img::before{
+    content: "Dra. Manuelita Elias";
+    position: absolute;
+    top: 21%;
+    left: -39.5rem;
+    font-size: 86px;
+    font-weight: 900;
+    color: var(--darker-main);
+    margin-bottom: 2rem;
+    z-index: 1000;
+}
+
+.hero .hero-img::after{
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    right: -10%;
+    height: 22.5rem;
+    width: 22.5rem;
+    background-color: #FAFAFA;
+    background-image:  repeating-linear-gradient(45deg, #E1E8B0 25%, transparent 25%, transparent 75%, #E1E8B0 75%, #E1E8B0), repeating-linear-gradient(45deg, #E1E8B0 25%, #FAFAFA 25%, #FAFAFA 75%, #E1E8B0 75%, #E1E8B0);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+    opacity: 0.9;
+    z-index: 10;
+}
+
+
+/*==========================              CLIENTES                       =================*/
+
+.clientes-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clientes-container h2{
+    text-align: center;
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--darker-main);
+}
+
+.clientes-container .clientes-galeria{
+    display: flex;
+    margin: 1rem;
+    width: 50vw;
+}
+
+.clientes-container .swiper-wrapper{
+    width: 100%;
+}
+
+.clientes-container .cliente{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.clientes-container .opinion{
+    height: 17.5rem;
+    width: 45.5rem;
+    background-color: var(--main);
+    border-radius: 1rem;
+    position: relative;
+    padding: 3rem;
+}
+
+.clientes-container .opinion::after{
+    content: "";
+    position: absolute;
+    left: 45%;
+    bottom: -3rem;
+    width: 0;
+    height: 0;
+    border-left: 3rem solid transparent;
+    border-right: 3rem solid transparent;
+    border-top: 6rem solid var(--main);
+}
+
+.clientes-container .opinion .text{
+    margin-top: -.5rem;
+}
+
+.clientes-container .opinion .text h3{
+    color: var(--darker-main);
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.clientes-container .opinion .text blockquote{
+    color: var(--darker-main);
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.clientes-container .persona{
+    display: flex;
+    margin-top: 1.5rem;
+    align-items: center;
+}
+
+.clientes-container .persona .foto{
+    width: 100px;
+    height: 100px;
+    margin-right: 26px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.clientes-container .persona .text h4{
+    font-size: 24px;
+    color: var(--darker-main);
+    margin-bottom: 1rem;
+}
+
+.clientes-container .persona .text p{
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--darker-main);
+}
