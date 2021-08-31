@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" href="/imgs/logo-1.jpg">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Dra. Manuelita Elías</title>
 </head>
 
@@ -51,67 +52,131 @@
             <div class="hero-img"><img src="imgs/manu.png"></div>
         </section>
 
+
+        <section class="tratamientos">
+          <h2>Tratamientos destacados</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus illo sequi alias harum ratione impedit!</p>
+
+          <div class="tarjetas-container">
+
+            <div class="tarjeta">
+              <div class="text">
+                <h3>Toxina Blínica</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse enim, asperiores dicta soluta corrupti tempora?</p>
+                <a>Más info</a>
+              </div>
+            </div>
+
+            <div class="tarjeta">
+              <div class="text">
+                <h3>Toxina Boínica</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse enim, asperiores dicta soluta corrupti tempora?</p>
+                <a>Más info</a>
+              </div>
+            </div>
+
+            <div class="tarjeta">
+              <div class="text">
+                <h3>Toxina Botnica</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse enim, asperiores dicta soluta corrupti tempora?</p>
+                <a>Más info</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
         <section class="clientes-container">
 
             <h2>Testimonios</h2>
 
-            <div class="clientes-galeria swiper">
-
-                <div class="swiper-wrapper">
-
-                    <div class="cliente swiper-slide">
-
-                        <div class="opinion">
-                            <div class="text">
-                                <h3>Experiencia increíble</h3>
-                                <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum facere
-                                    voluptatem eveniet.
-                                    Aperiam omnis voluptatem quo quod illo harum nobis.</blockquote>
-                            </div>
-                        </div>
-                        <div class="persona">
-                            <div class="foto"><img></div>
-                            <div class="text">
-                                <h4><em>Cachito Castaña</em></h4>
-                                <p>Abogado</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cliente swiper-slide">
-
-                        <div class="opinion">
-                            <div class="text">
-                                <h3>Experiencia increíble</h3>
-                                <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum facere
-                                    voluptatem eveniet.
-                                    Aperiam omnis voluptatem quo quod illo harum nobis.</blockquote>
-                            </div>
-                        </div>
-                        <div class="persona">
-                            <div class="foto"><img></div>
-                            <div class="text">
-                                <h4><em>Cachito Castaña</em></h4>
-                                <p>Abogado</p>
-                            </div>
-                        </div>
-                    </div>
-    
+            <div id="carouselExampleIndicators" class="carousel slide galeria" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-
+            
+                <div class="carousel-inner">
+            
+                  <div class="carousel-item active">
+                      <div class="d-block w-100 cliente">
+            
+                        <div class="opinion">
+                          <h3>Experiencia increíble</h3>
+                          <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum facere
+                              voluptatem eveniet.
+                              Aperiam omnis voluptatem quo quod illo harum nobis.</blockquote>
+                        </div>
+            
+                        <div class="persona">
+                          <div class="foto"><img></div>
+                            <div class="text">
+                              <h4><em>Cachito Castaña</em></h4>
+                              <p>Abogado</p>
+                            </div>
+                        </div>
+            
+                      </div>
+                  </div>
+            
+            
+                   <div class="carousel-item">
+                    <div class="d-block w-100 cliente">
+                      <div class="opinion">
+                        <h3>Experiencia increíble</h3>
+                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum facere
+                            voluptatem eveniet.
+                            Aperiam omnis voluptatem quo quod illo harum nobis.</blockquote>
+                      </div>
+                      <div class="persona">
+                        <div class="foto"><img></div>
+                        <div class="text">
+                            <h4><em>Cachito Castaña</em></h4>
+                            <p>Abogado</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            
+                  <div class="carousel-item">
+                    <div class="d-block w-100 cliente">
+                      <div class="opinion">
+                        <h3>Experiencia increíble</h3>
+                        <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum facere
+                            voluptatem eveniet.
+                            Aperiam omnis voluptatem quo quod illo harum nobis.</blockquote>
+                      </div>
+                      <div class="persona">
+                        <div class="foto"><img></div>
+                        <div class="text">
+                            <h4><em>Cachito Castaña</em></h4>
+                            <p>Abogado</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            
+                </div>
+            
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            
             </div>
-
         </section>
 
     </main>
     <footer>
 
     </footer>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 
 </html>
