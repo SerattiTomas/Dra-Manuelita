@@ -28,7 +28,7 @@ body{
 header{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background: var(--white);
     padding: .5rem;
 }
@@ -91,7 +91,7 @@ nav ul li a{
     color: var(--darker-main);
     margin: 1rem;
     font-weight: bold;
-    padding-bottom: .25rem;
+    padding-bottom: .5rem;
     font-size: 1.162rem;
 }
 
@@ -150,6 +150,7 @@ main{
     display: flex;
     justify-content: center;
     position: relative;
+    background-color: var(--white);
 }
 
 .hero .texto{
@@ -158,7 +159,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin-bottom: 7.5rem;
+    margin-bottom: 6.5rem;
 }
 
 .hero .texto h1{
@@ -223,47 +224,62 @@ main{
 .hero .hero-img::after{
     content: "";
     position: absolute;
-    bottom: -8%;
-    right: -10%;
-    height: 20rem;
-    width: 20rem;
-    background-color: #FAFAFA;
-    background-image:  repeating-linear-gradient(45deg, #E1E8B0 25%, transparent 25%, transparent 75%, #E1E8B0 75%, #E1E8B0), repeating-linear-gradient(45deg, #E1E8B0 25%, #FAFAFA 25%, #FAFAFA 75%, #E1E8B0 75%, #E1E8B0);
-    background-position: 0 0, 10px 10px;
-    background-size: 20px 20px;
-    opacity: 0.9;
+    bottom: -10%;
+    right: -12.5%;
+    height: 24rem;
+    width: 24rem;
+    background-image: radial-gradient(var(--main) 30%, transparent 0);
+    background-size: 30px 30px;
     z-index: 10;
 }
 
 
 /*====================================       TRATAMIENTOS                        =======================*/
+
 .tratamientos{
-    width: 100%;
+    width: 90vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     margin-top: 5rem;
+    background-color: var(--light-main);
+}
+
+.tratamientos h2{
+    color: var(--darker-main);
+    font-weight: 900;
+    font-size: 48px;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.tratamientos #tratamientos-p{
+    color: var(--darker-main);
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 2rem;
 }
 
 .tarjetas-container{
+    position: relative;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-
 .tarjeta{
-    height: 20rem;
-    width: 15rem;
+    height: 466px;
+    width: 350px;
     padding: 0;
     background-color: black;
     background-image: url();
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative;
     display: flex;
     text-align: center;
     overflow: hidden;
+    position: relative;
 }
 
 .tarjeta:nth-child(2){
@@ -276,17 +292,30 @@ main{
 
 .tarjeta:hover > .text{
     transform: translateY(0%);
+    padding-top: 10rem;
 }
 
 .tarjeta .text{
     padding: 1em;
     background-color: var(--darker-main);
-    transition: transform 200ms ease-in-out;
-    transform: translateY(80%);
+    transition: all 300ms ease-out;
+    transform: translateY(87%);
 }
 
 .tarjeta .text h3{
-    color: var(--dark-main);
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: .5px;
+}
+
+.tarjeta .text p{
+    color: var(--white);
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 18px;
 }
 
 .tarjeta .text a{
@@ -300,6 +329,7 @@ main{
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
