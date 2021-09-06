@@ -26,11 +26,12 @@ body{
 }
 
 header{
+    width: 80vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: var(--white);
-    padding: .5rem;
+    padding: .5rem 1rem;
 }
 
 header .toggle{
@@ -78,19 +79,16 @@ header .logo{
     height: 4rem;
 }
 
-nav{
-    margin-right: 10rem;
-}
-
-nav ul{
+header nav ul{
     list-style: none;
+    padding-left: 0;
 }
 
-nav ul li{
+header nav ul li{
     display: inline-block;
 }
 
-nav ul li a{
+header nav ul li a{
     text-decoration: none;
     color: var(--darker-main);
     margin: 1rem;
@@ -99,8 +97,8 @@ nav ul li a{
     font-size: 1.162rem;
 }
 
-nav ul li a:hover{
-    border-bottom: 2px solid var(--darker-main);
+header nav ul li a:hover{
+    border-bottom: 2.5px solid var(--main);
     color: var(--darker-main);
 }
 
@@ -139,6 +137,7 @@ header .redes i{
 /*===============================                           MAIN                       ===========================*/
 
 main{
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -193,6 +192,7 @@ main{
     border: none;
     cursor: pointer;
     transition: all 0.2s;
+    text-transform: uppercase;
 }
 
 .hero .texto button:hover{
@@ -241,13 +241,14 @@ main{
 /*====================================       TRATAMIENTOS                        =======================*/
 
 .tratamientos{
-    width: 90vw;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     text-align: center;
     margin-top: 5rem;
     background-color: var(--light-main);
+    padding: 3rem 3rem;
 }
 
 .tratamientos h2{
@@ -270,6 +271,8 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 1rem;
+    width: 80vw;
 }
 
 .tarjeta{
@@ -277,13 +280,16 @@ main{
     width: 350px;
     padding: 0;
     background-color: black;
-    background-image: url();
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     text-align: center;
     overflow: hidden;
     position: relative;
+}
+
+.tarjeta:first-child{
+    background-image: url();
 }
 
 .tarjeta:nth-child(2){
@@ -324,7 +330,6 @@ main{
 
 .tarjeta .text a{
     cursor: pointer;
-    display: inline;
     text-decoration: none;
     color: var(--darker-main);
     background-color: var(--white);
@@ -336,12 +341,16 @@ main{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.tarjeta .text a:hover{
+    background-color: var(--main);
+}
+
 
 /*==========================              CLIENTES                       =================*/
 
 .clientes-container{
     width: 100vw;
-    padding: 10rem 5rem;
+    padding: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -354,27 +363,45 @@ main{
     color: var(--darker-main);
 }
 
-.clientes-container .clientes-galeria{
-    height: 100%;
-    width: 100%;
-    background-color: #000;
-}
-
-.clientes-container .carrousel-item{
+.slideshow-container{
+    max-width: fit-content;
     position: relative;
-    height: 30rem;
+    margin: auto;
 }
-
-.clientes-container .cliente{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  
+.mySlides{
+    display: flex;
+    justify-content: center;
+}
+  
+.dots{
+    text-align: center;
+}
+  
+.dots .dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover, .dot.active {
+    background-color: #717171;
+}
+  
+.cliente{
+    min-width: 700px;
+    height: max-content;
+    padding: 3rem 10rem;
     display: flex;
     flex-direction: column;
 }
-
-.clientes-container .opinion{
+  
+.cliente .opinion{
     height: 17.5rem;
     width: 45.5rem;
     background-color: var(--main);
@@ -382,60 +409,60 @@ main{
     position: relative;
     padding: 3rem;
 }
-
-.clientes-container .opinion::after{
+  
+.cliente .opinion::after{
     content: "";
     position: absolute;
-    left: 45%;
+    left: 5%;
     bottom: -3rem;
     width: 0;
     height: 0;
     border-left: 3rem solid transparent;
     border-right: 3rem solid transparent;
     border-top: 6rem solid var(--main);
+    z-index: -1;
 }
-
-.clientes-container .opinion h3{
+  
+.cliente .opinion h3{
     color: var(--darker-main);
     font-weight: bold;
     font-size: 24px;
     text-align: center;
     margin-bottom: 26px;
 }
-
-.clientes-container .opinion blockquote{
+ 
+.cliente .opinion blockquote{
     color: var(--darker-main);
     font-weight: 300;
     font-size: 24px;
     line-height: 35px;
 }
-
-.clientes-container .persona{
+  
+.cliente .persona{
     display: flex;
-    margin-top: 1.5rem;
+    margin-top: 4rem;
     align-items: center;
 }
-
-.clientes-container .persona .foto{
+  
+.cliente .persona .foto{
     width: 100px;
     height: 100px;
     margin-right: 26px;
     background-color: black;
     border-radius: 50%;
 }
-
-.clientes-container .persona .text h4{
+  
+.cliente .persona .text h4{
     font-size: 24px;
     color: var(--darker-main);
     margin-bottom: 1rem;
 }
-
-.clientes-container .persona .text p{
+  
+.cliente .persona .text p{
     font-size: 18px;
     font-weight: 300;
     color: var(--darker-main);
 }
-
 
 /*===============================                  FOOTER                    ==========================*/
 
@@ -447,8 +474,9 @@ footer{
     padding: 1rem 5rem;
 }
 
-footer img{
+footer svg{
     width: 220px;
+    fill: var(--white);
 }
 
 footer nav{
@@ -457,7 +485,6 @@ footer nav{
 }
 
 footer nav ul{
-    margin-left: 7.5rem;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -513,14 +540,15 @@ footer .derechos p{
 
 footer .derechos .redes{
     display: flex;
+    margin-right: -.55rem;
 }
 
 footer .derechos .redes a{
     position: relative;
     background-color: var(--dark-main);
     border-radius: 50%;
-    height: 2rem;
-    width: 2rem;
+    height: 24px;
+    width: 24px;
     margin: 0 .5rem;
     opacity: .8;
     transition: all 0.2s;
@@ -531,15 +559,52 @@ footer .derechos .redes a:hover{
 }
 
 footer .derechos .redes #ig{
-    font-size: 1.3rem;
+    font-size: 14px;
 }
 
 footer .derechos .redes i{
     color: var(--white);
-    font-size: 1.162rem;
+    font-size: 12px;
     padding: .5rem;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+}
+
+
+/*******************************************************ABOUT*******************************************************/
+
+.about{
+    display: flex;
+}
+
+.about img{
+    flex-grow: 2;
+    width: 732px;
+    margin-right: 28px;
+}
+
+.about .text{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 20rem;
+}
+
+.about .text h1{
+    color: var(--darker-main);
+    font-weight: 900;
+    font-size: 48px;
+}
+
+.about .text h2{
+    color: var(--dark-main);
+    font-size: 24px;
+}
+
+.about .text p{
+    color: var(--darker-main);
+    font-size: 18px;
+    line-height: 25px;
 }
