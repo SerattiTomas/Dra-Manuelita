@@ -26,7 +26,7 @@ body{
 }
 
 header{
-    width: 80vw;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -607,4 +607,142 @@ footer .derechos .redes i{
     color: var(--darker-main);
     font-size: 18px;
     line-height: 25px;
+}
+
+
+/*============================                              CONTACTO                      ===========================*/
+
+.contacto-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.contacto-container h2{
+    color: var(--darker-main);
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 64px;
+}
+
+.contacto-container .medios{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contacto-container .medios .medio{
+    text-align: center;
+    color: var(--darker-main);
+}
+
+.contacto-container .medios .medio i{
+    font-size: 48px;
+    margin-bottom: 26px;
+}
+
+.contacto-container .medios .medio h3{
+    font-size: 24px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.contacto-container .medios .medio h4{
+    font-size: 18px;
+    margin-bottom: 1rem;
+    color: var(--dark-main);
+}
+
+.contacto-container .medios .medio p{
+    font-size: 18px;
+}
+
+.contacto-container .texto{
+    color: var(--darker-main);
+    margin-top: 100px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.contacto-container .texto h2{
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.contacto-container h1{
+    color: var(--dark-main);
+    font-size: 48px;
+    letter-spacing: 0.5px;
+    margin-bottom: 46px;
+    position: relative;
+}
+
+.contacto-container h1::after{
+    content: "";
+    background-color: var(--main);
+    height: 25px;
+    width: 95%;
+    position: absolute;
+    bottom: -.35rem;
+    right: -1rem;
+    z-index: -1;
+}
+
+.contacto-container .texto p{
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+}
+
+.contacto-container .form{
+    margin-bottom: 20px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto-container .form .nye{
+    display: flex;
+    width: 100%;
+}
+
+.contacto-container .form .nye input{
+    padding: 12px 24px;
+    width: 1000px;
+    background-color: var(--light-main);
+    outline: none;
+    border: none;
+}
+
+.contacto-container .form .nye .nombre{
+    margin-right: 30px;
+}
+
+.contacto-container .form textarea{
+    margin-top: 1rem;
+    padding: 12px 24px;
+    width: 100%;
+    background-color: var(--light-main);
+    outline: none;
+    border: none;
+    resize: none;
+    height: 150px;
+}
+
+.contacto-container .form .enviar{
+    width: 133px;
+    height: 58px;
+    background-color: var(--main);
+    color: var(--darker-main);
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 900;
 }
