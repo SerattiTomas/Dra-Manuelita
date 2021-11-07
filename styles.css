@@ -582,15 +582,18 @@ footer .derechos .redes i{
 
 .about img{
     flex-grow: 2;
-    width: 732px;
+    width: 640px;
+    height: 558px;
     margin-right: 28px;
+    position: relative;
 }
 
 .about .text{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    max-width: 20rem;
+    margin-top: auto;
+    max-width: 444px;
 }
 
 .about .text h1{
@@ -608,6 +611,8 @@ footer .derechos .redes i{
     color: var(--darker-main);
     font-size: 18px;
     line-height: 25px;
+    max-width: 429px;
+    letter-spacing: 0.5px;
 }
 
 
