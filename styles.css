@@ -23,15 +23,18 @@ html{
 
 body{
     background: var(--white);
+    width: 100vw;
 }
 
 header{
-    width: 100vw;
+    width: 85vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: var(--white);
     padding: .5rem 1rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 header .toggle{
@@ -77,6 +80,10 @@ header .toggle.active::after{
 
 header .logo{
     height: 4rem;
+}
+
+header nav{
+    margin-top: .9rem;
 }
 
 header nav ul{
@@ -238,9 +245,9 @@ main{
 }
 
 
-/*====================================       TRATAMIENTOS                        =======================*/
+/*====================================       TRATAMIENTOS-INDEX                       =======================*/
 
-.tratamientos{
+.tratamientos-index{
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -251,7 +258,7 @@ main{
     padding: 3rem 3rem;
 }
 
-.tratamientos h2{
+.tratamientos-index h2{
     color: var(--darker-main);
     font-weight: 900;
     font-size: 48px;
@@ -259,7 +266,7 @@ main{
     margin-bottom: 1rem;
 }
 
-.tratamientos #tratamientos-p{
+.tratamientos-index #tratamientos-p{
     color: var(--darker-main);
     font-weight: 300;
     font-size: 18px;
@@ -578,18 +585,38 @@ footer .derechos .redes i{
 
 .about{
     display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+
+.about article{
+    display: flex;
+    margin-bottom: 4rem;
 }
 
 .about img{
-    flex-grow: 2;
     width: 640px;
     height: 558px;
     margin-right: 28px;
+}
+
+.about .img-about{
     position: relative;
 }
 
+.about .img-about::after{
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+    height: 24rem;
+    width: 24rem;
+    background-image: radial-gradient(var(--main) 30%, transparent 0);
+    background-size: 30px 30px;
+    z-index: -10;
+}
+
 .about .text{
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     margin-top: auto;
@@ -615,6 +642,9 @@ footer .derechos .redes i{
     letter-spacing: 0.5px;
 }
 
+.about .text span{
+    font-weight: bold;
+}
 
 /*============================                              CONTACTO                      ===========================*/
 
@@ -751,4 +781,92 @@ footer .derechos .redes i{
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 900;
+}
+
+
+/*************                       TRATAMIENTOS                 *************************/
+
+.texto-trat{
+    max-width: 85vw;
+    margin: 3rem 0;
+}
+
+.texto-trat h2{ 
+    color: var(--darker-main);
+    font-weight: 900;
+    font-size: 48px;
+}
+
+.texto-trat p{ 
+    color: var(--darker-main);
+}
+
+.tratamientos{
+    width: 85%;
+    overflow-x: visible;
+}
+
+.tratamientos .tratamiento{
+    display: flex;
+    align-items: center;
+}
+
+.tratamientos .tratamiento.der{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.tratamientos .tratamiento.der .img::after{
+    display: none;
+}
+
+.tratamientos .tratamiento .img{
+    position: relative;
+}
+
+.tratamientos .tratamiento .img::after{
+    content: "";
+    position: absolute;
+    bottom: -15%;
+    left: -15%;
+    height: 24rem;
+    width: 24rem;
+    background-image: radial-gradient(var(--main) 20%, transparent 0);
+    background-size: 30px 30px;
+    z-index: -10;
+}
+
+.tratamientos .tratamiento .content{
+    margin-left: 1rem;
+    max-width: 60%;
+}
+
+.tratamientos .tratamiento .content h3{
+    text-transform: uppercase;
+    color: var(--darker-main);
+    font-weight: 900;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 24px;
+}
+
+.tratamientos .tratamiento .content h3::after{
+    content: "";
+    width: 100%;
+    height: 18px;
+    left: 0;
+    top: 50%;
+    position: absolute;
+    background-color: var(--main);
+    z-index: -1;
+}
+
+.tratamientos .tratamiento .content p{
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.tratamientos .tratamiento .content h4{
+    color: var(--dark-main);
 }
