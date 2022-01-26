@@ -809,11 +809,16 @@ footer .derechos .redes i{
 .tratamientos .tratamiento{
     display: flex;
     align-items: center;
+    margin-bottom: 5rem;
 }
 
 .tratamientos .tratamiento.der{
     display: flex;
     flex-direction: row-reverse;
+}
+
+.tratamientos .tratamiento.der .content{
+    margin-right: 1rem;
 }
 
 .tratamientos .tratamiento.der .img::after{
@@ -822,6 +827,10 @@ footer .derechos .redes i{
 
 .tratamientos .tratamiento .img{
     position: relative;
+}
+
+.tratamientos .tratamiento img{
+    max-width: 400px;
 }
 
 .tratamientos .tratamiento .img::after{
